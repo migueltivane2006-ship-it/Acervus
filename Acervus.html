@@ -1,0 +1,278 @@
+<!DOCTYPE html> 
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Explicações</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- Incluindo jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Centro de Explicações Acervus</div>
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#planos" class="nav-link">Planos</a></li>
+        <li><a href="#pagamentos" class="nav-link">Pagamentos</a></li>
+        <li><a href="#contactos" class="nav-link">Contactos</a></li>
+        <li><a href="#inscrever-se" class="nav-button">Inscrever-se</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Explicações de qualidade para transformar <span class="text-highlight">notas</span> em <span class="text-highlight">resultados</span>.
+      </h1>
+      <p class="hero-description">
+        Acompanhamento do 1º ao 12º ano, preparação para exames de admissão, cursos de Inglês e Informática. Aulas presenciais.
+      </p>
+      <div class="hero-buttons">
+        <a href="#inscrever-se" class="primary-button">Inscrever-se agora</a>
+        <a href="#servicos" class="secondary-button">Ver serviços</a>
+      </div>
+      <div class="hero-features">
+        <div class="feature-item"><span>✅</span> Professores experientes</div>
+        <div class="feature-item"><span>📚</span> Material actualizado</div>
+        <div class="feature-item"><span>💬</span> Acompanhamento individual</div>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="hero-image-wrapper">
+        <img src="IMG-20250926-WA0033.jpg" 
+             alt="Logo Acervus" 
+             class="hero-image">
+        <div class="info-card">
+          <div class="info-title">+ de 4 áreas</div>
+          <div class="info-subtitle">Explicações • Exames • Inglês • Informática</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="services-section">
+    <div class="section-header">
+      <h2 class="section-title">O que oferecemos</h2>
+      <p class="section-subtitle">Programas flexíveis para cada fase de aprendizagem.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3 class="service-title">Explicação 1º–12º ano</h3>
+        <p class="service-description">Reforço escolar por disciplina, apoio a trabalhos e preparação contínua para testes. Planos individuais ou em grupo.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📝</div>
+        <h3 class="service-title">Exames de Admissão</h3>
+        <p class="service-description">Treino intensivo com simulados, revisão de conteúdos-chave e estratégias para provas.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗣️</div>
+        <h3 class="service-title">Curso de Inglês</h3>
+        <p class="service-description">Do básico ao avançado: conversação, gramática e preparação para entrevistas e estudos.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3 class="service-title">Informática</h3>
+        <p class="service-description">Word, Excel, Powerpoint, Entre outros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section id="planos" class="plans-section">
+    <div class="section-header">
+      <h2 class="section-title">Planos e Horários</h2>
+      <p class="section-subtitle">Aulas presenciais e online, em horários flexíveis. Valores sob consulta.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <h3 class="plan-title">Fundamental</h3>
+        <p class="plan-subtitle">1º–6º ano</p>
+        <ul class="plan-features">
+          <li>Reforço por disciplina</li>
+          <li>Turmas pequenas</li>
+          <li>Relatórios mensais</li>
+        </ul>
+        <button class="plan-button show-prestacoes" data-plano="fundamental">Quero saber valores</button>
+        
+        <!-- Lista de Prestações (inicialmente oculta) -->
+        <div class="prestacoes-list" id="prestacoes-fundamental" style="display: none;">
+          <h4>Opções de Pagamento - Fundamental</h4>
+          <ul>
+            <li><strong>Mensal:</strong> 500 MZN/mês</li>
+            <li><strong>Trimestral:</strong> 1.500 MZN</li>
+            <li><strong>Semestral:</strong> 3.000 MZN</li>
+            <li><strong>Anual:</strong> 5.000 MZN</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="plan-card featured">
+        <h3 class="plan-title">Secundário</h3>
+        <p class="plan-subtitle">7º–12º ano</p>
+        <ul class="plan-features">
+          <li>Preparação para testes e exames</li>
+          <li>Plano individual</li>
+          <li>Simulados mensais</li>
+        </ul>
+        <button class="plan-button show-prestacoes" data-plano="secundario">Quero saber valores</button>
+        
+        <!-- Lista de Prestações (inicialmente oculta) -->
+        <div class="prestacoes-list" id="prestacoes-secundario" style="display: none;">
+          <h4>Opções de Pagamento - Secundário</h4>
+          <ul>
+            <li><strong>Mensal:</strong> 1.000 MZN/mês</li>
+            <li><strong>Trimestral:</strong> 3.000 MZN</li>
+            <li><strong>Semestral:</strong> 6.000 MZN</li>
+            <li><strong>Anual:</strong> 10.000 MZN</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="plan-card">
+        <h3 class="plan-title">Exames & Cursos</h3>
+        <p class="plan-subtitle">Admissão • Inglês • Informática</p>
+        <ul class="plan-features">
+          <li>Preparação intensiva</li>
+          <li>Workshops práticos</li>
+          <li>Certificado de participação</li>
+        </ul>
+        <button class="plan-button show-prestacoes" data-plano="cursos">Quero saber valores</button>
+        
+        <!-- Lista de Prestações (inicialmente oculta) -->
+        <div class="prestacoes-list" id="prestacoes-cursos" style="display: none;">
+          <h4>Opções de Pagamento - Cursos</h4>
+          <ul>
+            <li><strong>Inglês Básico:</strong> 600 MZN</li>
+            <li><strong>Informática:</strong> 800 MZN</li>
+            <li><strong>Preparação para Exames por disciplina:</strong> 600 MZN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE INSCRIÇÃO -->
+  <section id="inscrever-se" class="form-section">
+    <div class="form-container">
+      <div class="section-header">
+        <h2 class="section-title">Inscreva-se</h2>
+        <p class="section-subtitle">Preencha o formulário para começar a aprender connosco.</p>
+      </div>
+
+      <form action="https://formspree.io/f/xldwwqvz" method="POST" class="form">
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="form-label">Seu Email</label>
+          <input type="email" id="email" name="Email" required class="form-input">
+        </div>
+
+        <!-- Telefone -->
+        <div class="form-group">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input type="tel" id="telefone" name="Telefone" required class="form-input">
+        </div>
+
+        <!-- Género -->
+        <div class="form-group">
+          <label for="genero" class="form-label">Género</label>
+          <select id="genero" name="Género" required class="form-select">
+            <option value="">-- Selecione --</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outro</option>
+            <option>Prefiro não dizer</option>
+          </select>
+        </div>
+        
+        <!-- Nível Académico -->
+        <div class="form-group">
+          <label for="nivel" class="form-label">Nível Académico</label>
+          <select id="nivel" name="Nível Académico" required class="form-select">
+            <option value="">-- Selecione --</option>
+            <option>1º Ciclo (1º–6º ano)</option>
+            <option>2º Ciclo (7º–12º ano)</option>
+            <option>Pré-Universitário / Exames de Admissão</option>
+            <option>Curso de Inglês</option>
+            <option>Curso de Informática</option>
+          </select>
+        </div>
+
+        <!-- Botão -->
+        <button type="submit" class="submit-button">Enviar Inscrição</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTOS -->
+  <section id="contactos" class="contact-section">
+    <div class="contact-container">
+      <div class="section-header">
+        <h2 class="section-title">Fale Conosco</h2>
+        <p class="section-subtitle">Envie uma mensagem e retornaremos o mais breve possível.</p>
+      </div>
+      <form action="https://formspree.io/f/xldwwqvz" method="POST" class="form">
+        <div class="form-group">
+          <label for="email_contato" class="form-label">Seu email:</label>
+          <input type="email" id="email_contato" name="email" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="mensagem" class="form-label">Sua mensagem:</label>
+          <textarea id="mensagem" name="message" required rows="5" class="form-textarea"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- PAGAMENTOS -->
+  <section id="pagamentos" class="payment-section">
+    <div class="section-header">
+      <h2 class="section-title">Formas de Pagamento</h2>
+      <p class="section-subtitle">Aceitamos pagamentos por M-Pesa e e-Mola.</p>
+    </div>
+    <div class="payment-grid">
+      <div class="payment-card">
+        <div>
+          <div class="payment-label">M-Pesa</div>
+          <div class="payment-number">844286434</div>
+        </div>
+        <button onclick="copyText('844286434','M-Pesa')" class="copy-button">Copiar</button>
+      </div>
+      <div class="payment-card">
+        <div>
+          <div class="payment-label">e-Mola</div>
+          <div class="payment-number">877996142</div>
+        </div>
+        <button onclick="copyText('877996142','e-Mola')" class="copy-button">Copiar</button>
+      </div>
+    </div>
+    <div id="copiado-msg" class="copy-message"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p id="footer-text">Desenvolvido por Miguel Tivane &copy; 2025</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Facebook</a>
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Incluindo os arquivos JavaScript -->
+  <script src="script.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
